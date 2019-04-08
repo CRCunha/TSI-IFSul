@@ -100,33 +100,34 @@ insert into pedido_produto (tot_produto, qtd_pedida, cd_produto, nr_pedido) valu
 insert into pedido_produto (tot_produto, qtd_pedida, cd_produto, nr_pedido) values (30, 2, 4, 1003);
 insert into pedido_produto (tot_produto, qtd_pedida, cd_produto, nr_pedido) values (12, 2, 8, 1004);
 
-1- ALTER TABLE clientes ALTER COLUMN nm_cliente TYPE VARCHAR(40);
+alter table clientes alter column nm_cliente type varchar(40);
 
-2- ALTER TABLE clientes ADD COLUMN profissao VARCHAR(25);
+alter table clientes add column profissao varchar(25);
 
-3- ALTER TABLE clientes ALTER COLUMN profissao SET DEFAULT 0;
+alter table clientes alter column profissao set default 'indefinida';
 
-4- SELECT * FROM clientes;
+select * from clientes;
 
-5- SELECT * FROM clientes WHERE cd_cliente = 10;
+insert into clientes (cd_cliente, nm_cliente, nr_residencia, complemento, sexo, cpf) values (100, 'Gustavo Bitencourt', '207', 1, 'M', 04687912055);
 
-6- ALTER TABLE clientes RENAME TABLE profissao to profissao_cliente;
+select * from clientes where cd_cliente=10;
 
-7- SELECT DISTINCT nm_cidade FROM clientes;
+alter table clientes rename column profissao to profissao_cliente;
 
-8- SELECT profissao_clientes FROM clientes;
+select distinct nm_cidade from cep;
 
-9- DROP TABLE clientes;
+select profissao_cliente from clientes;
 
-10-ALTER TABLE clientes DROP COLUMN profissao_clientes;
+drop table clientes;
 
-11-INSERT INTO produtos (cd_produto, nm_produto, vl_unitario, qtd_estoque) VALUES (10, “agenda”, 8.50, 30);
+alter table clientes drop column profissao_cliente; 
 
-12-SELECT * FROM produto WHERE valor_unitario < 10,00;
+insert into produto (cd_produto, nm_produto, vl_unitario, qtd_estoque) values (10,'agenda', 8.50, 30);
 
-13-SELECT * FROM produto WHERE valor_unitario >= 5,00 AND vl_unitario <= 10,00;
+select * from produto where vl_unitario<10;
 
-14-
+select * from produto where vl_unitario>=5 and vl_unitario<=10;
+
 
 
 

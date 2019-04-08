@@ -1,0 +1,14 @@
+@media only screen and (max-width: 450px) {
+    header {
+        width: 100%;
+        height: 280px;
+        background-image: linear-gradient(120deg, #f6d365 0%, #fda085 100%);
+        border-bottom-left-radius: 25%;
+        display: var(--flex);
+        justify-content: var(--center);
+        align-items: var(--center);
+    }
+    header IMG {
+        width: 25%;
+    }
+}
