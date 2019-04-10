@@ -1,5 +1,6 @@
 <?php
 include("conecta.php");
+include("front.php");
 include("funcoes.php");
 //exclusao!!!!!!
 if(isset($_REQUEST['enviar'])){
@@ -19,28 +20,20 @@ if(isset($_REQUEST['enviar'])){
 //listagem 
 try {
 	//$link foi criado no conecta.php
-	$sql = "select cdpessoa,nome,nascimento from pessoa order by nome";
+	$sql = "select cdpessoa,email from pessoa order by cdpessoa";
 	$consulta = $link->prepare($sql);
 	$consulta->execute();
 	//enquanto tem registros disponíveis 
 	//na consulta, copia cada um deles 
 	//para o vetor associativo $registro 
-	abreTag("form");
 	while ($registro = $consulta->fetch(PDO::FETCH_ASSOC)) {
 		$cdpessoa = $registro['cdpessoa'];
 		//acerta acentuação para UTF8
-		$nome = utf8_encode($registro['nome']);
-		//%B nome do mes extenso, %m mes com 2 digitos
-		//%Y ano com quatro dígitos ,%A dia da semana extenso
-		$nascimento =  strftime("%d/%m/%Y",strtotime($registro['nascimento']));	
-		abreTag("input",array("name"=>"codigo",
-							  "value"=>"$cdpessoa",
-							  "type"=>"radio"));
-		echo(" $cdpessoa - $nome - $nascimento<br>");
+		$email = utf8_encode($registro['email']);
+		abreTag("input",array("name"=>"codigo","value"=>"$cdpessoa","type"=>"radio"));
+		echo("$cdpessoa - $email<br>");
 	}
-	abreTag("input",array("name"=>"enviar",
-							  "value"=>"deletar",
-							  "type"=>"submit"));
+	abreTag("input",array("name"=>"enviar","value"=>"deletar","type"=>"submit"));
 	fechaTag("form");
 }
 catch(PDOException $ex){

@@ -17,7 +17,7 @@
     <link rel="stylesheet" type="text/CSS" href="CSS/01-HEADER/header.css">
     <link rel="stylesheet" type="text/CSS" href="CSS/02-MAIN/main.css">
     <!--FONTES-->
-
+    <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
     <!--FAV ICON-->
     <link rel="shortcut icon" type="" href="" />
 </head>
@@ -26,17 +26,12 @@
     <!-- 01 HEADER-->
     <header>
         <img src="IMG/01-HEADER/user.png">
-    </header>
-    <!-- 02 MAIN -->
-    <main>
-        <div class="links">
+        <div class="return">
             <div class="container">
-                <a href="#">Login</a>
-                <a href="register.php">Register</a>
-                <a href="consulta.php">Consulta</a>
+                <a href="index.html"><img src="IMG/01-HEADER/return.png"></a>
             </div>
         </div>
-    </main>
-</body>
-
-</html>
+    </header>
+    <!-- 02 MAIN -->
+    <main id="front">
+        
