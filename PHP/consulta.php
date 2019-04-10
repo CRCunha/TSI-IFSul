@@ -18,7 +18,7 @@ try {
 		$email = $registro['email'];
 		$senha =  $registro['senha'];	
 
-		echo("<div class='dado'> <div class='code'>$cdpessoa</div>  $email</div>");
+		echo("<div class='dado'> <div class='code'>$cdpessoa</div>  <div class='email'>$email</div></div>");
 	}
 }
 catch(PDOException $ex){
