@@ -26,12 +26,12 @@ try {
 		$email = $registro['email'];
 		$senha =  $registro['senha'];	
 
-		echo("<div class='dado'> <div class='code'>$cdpessoa</div>  <div class='email'>$email</div></div>");
+		echo("<div class='dado'> <div class='code'  id='code' onclick='numero()'>$cdpessoa</div>  <div class='email'>$email</div></div>");
 	}
 }
 catch(PDOException $ex){
 	echo($ex->getMessage());
 }
-echo("<form heigh='50px'><input type='number' name='codigo' placeholder='Digite o numero'>");
-echo("<input type='submit' name='enviar'></form>");
+echo("<form method='POST'><input type='number' name='codigo' placeholder='Digite o numero'>");
+echo("<input type='submit' name='enviar' placeholder='Excluir' value='Excluir' id='excluir'></form>");
 ?>

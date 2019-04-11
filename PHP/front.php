@@ -16,6 +16,7 @@
     <link rel="stylesheet" type="text/CSS" href="CSS/NORMALIZE/NORMALIZE.css">
     <link rel="stylesheet" type="text/CSS" href="CSS/01-HEADER/header.css">
     <link rel="stylesheet" type="text/CSS" href="CSS/02-MAIN/main.css">
+    <script type="text/JavaScript" src="JS/main.js"></script>
     <!--FONTES-->
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
     <!--FAV ICON-->
