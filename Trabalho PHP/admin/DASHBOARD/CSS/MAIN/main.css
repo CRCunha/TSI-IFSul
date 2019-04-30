@@ -1,0 +1,8 @@
+main {
+    width: 80%;
+    height: 100%;
+    display: var(--flex);
+    justify-content: var(--center);
+    align-items: var(--center);
+    /* background-color: aqua; */
+}

@@ -13,7 +13,7 @@ if(isset($_REQUEST['login'])){
 			//cria campo usuario na sessao
 			$_SESSION['usuario'] = $usuario;
 			//redireciona para o index
-			header("Location: ../index.php");
+			header("Location: DASHBOARD/dash.php");
 		}
 		else {
 			//dá mensagem de erro
