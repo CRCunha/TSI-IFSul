@@ -31,7 +31,7 @@
         </div>
         <div class="btns">
             <!-- BTN 1-->
-            <div class="btn">
+            <div class="btn" onclick="adicionar()">
                 <div class="container">
                     <div class="icon">
                         <img src="IMG/BTNS/add.png">
@@ -69,17 +69,17 @@
         </div>
     </div>
     <main id="conteudo">
+        <?php
+            echo("ingnorar o menu laterial e colocar todas as 'funcs' aqui");
+            echo("<br>Ou criar uma pagina de dashboard para cada 'func'");
+            echo("<br>Caso criar para cada 'func, colocar auto scroll smooth");
+            include('../conecta.php');
+            error_reporting(0);
+            if($_REQUEST['login'] == 'Sair'){
+                session_destroy();
+                header("Location: ../index.php");
+            }
+        ?>
     </main>
 </body>
-
-<?php
-    error_reporting(0);
-    if($_REQUEST['login'] == 'Sair'){
-    //destroi a sessao
-    session_destroy();
-    //redireciona para o index
-    header("Location: ../index.php");
-    }
-
-?>
 </html>
